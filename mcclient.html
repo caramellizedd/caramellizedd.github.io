@@ -1,6 +1,12 @@
 <head>
     <link rel="stylesheet" href="/style/default.css">
     <title>The Unknown Client</title>
+    <script src="/scripts/jquery.min.js"></script> 
+  <script type="text/javascript">
+    $(function (){
+    $("#socialmedia").load("Info.html");
+   });
+   </script>
   </head>
   <body>
     <div class="headerimaj">
@@ -29,13 +35,7 @@
           <img src="assets/javainstall.png" width="450">
           <p>NOTE: Acrylic Titlebar on The Java version is not included<br>it is a side-effect from me using MicaForEveryone</p>
           <br><br>
-          <h2>-----------------------------------------------------------------</h2>
-          <h2>Socials:</h2>
       </div>
-      <div class="textoflinks">
-          <a href="https:\\twitter.com\and1558">BlueBird App</a><br>
-          <a href="https:\\youtube.com\@and1558.">Youtube</a><br>
-          <a href="https://discord.gg/UhaPRm299c">Discord</a>
-      </div>
+      <div id="socialmedia"></div>
     </div>  
   </body>

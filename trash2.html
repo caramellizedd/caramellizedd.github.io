@@ -1,6 +1,12 @@
 <head>
     <link rel="stylesheet" href="/style/default.css">
     <title>About me</title>
+    <script src="/scripts/jquery.min.js"></script> 
+    <script type="text/javascript">
+      $(function (){
+      $("#socialmedia").load("Info.html");
+      });
+    </script>
     </head>
     <body>
       <div class="headerimaj">
@@ -24,12 +30,7 @@
             <br></p><br>
             <button onclick="location.href = '/trash.html';">Last Page</button>
             <br><br>
-            <h2>Socials:</h2>
         </div>
-        <div class="textoflinks">
-            <a href="https:\\twitter.com\and1558">BlueBird App</a><br>
-            <a href="https:\\youtube.com\@and1558.">Youtube</a><br>
-            <a href="https://discord.gg/UhaPRm299c">Discord</a>
-        </div>
+        <div id="socialmedia"></div>
       </div>  
     </body>

@@ -1,6 +1,12 @@
 <head>
   <link rel="stylesheet" href="/style/default.css">
   <title>WELCOME HOME!</title>
+  <script src="/scripts/jquery.min.js"></script> 
+  <script type="text/javascript">
+    $(function (){
+    $("#socialmedia").load("Info.html");
+   });
+   </script>
 </head>
 <body>
   <div class="headerimaj">
@@ -17,15 +23,9 @@
         <h1>Welcome to my Github Page</h1>
         <p>This contains random stuff i just put together out of boredom</p>
         <p>On your visit here and if you do plan to stay, we are NOT responsible to anything that happened to your sanity<br>and your soul :)</p>
-        <p>This website Page was shamelessly stolen from another website :)</p>
+        <p>The theme of this website was shamelessly stolen from another website :)</p>
         <br><br><br><br>
-        <h2>Use the navigation bar on the top to explore the website<br>-----------------------------------------------------------------</h2>
-        <h2>Socials:</h2>
     </div>
-    <div class="textoflinks">
-        <a href="https:\\twitter.com\and1558">BlueBird App</a><br>
-        <a href="https:\\youtube.com\@and1558.">Youtube</a><br>
-        <a href="https://discord.gg/UhaPRm299c">Discord</a>
-    </div>
+    <div id="socialmedia"></div>
   </div>  
 </body>

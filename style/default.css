@@ -56,8 +56,6 @@ body {
 
 .elgato {
     margin-top: 20px;
-    /* Add a top margin to avoid content overlay */
-    display: block;
     width: 800px;
     /* suitable for 800x600 displays? */
     display: block;

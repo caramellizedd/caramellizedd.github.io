@@ -1,0 +1,80 @@
+/* Add a black background color to the top navigation */
+.navbar {
+    background-color: #CCCCCC55;
+    box-shadow: 5px 5px 5px #00000066;
+    width: 780px;
+    margin-top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 16px;
+    border: 2px solid #3b2b2b55;
+    border-radius: 10px;
+    backdrop-filter: blur(12px);
+    position: fixed;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+    transition: box-shadow 0.3s, background-color 0.3s, padding 0.3s;
+    border-radius: 12px;
+    float: none;
+    color: white;
+    background-color: #00000000;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.navbar a:hover {
+    transition: box-shadow 0.3s, background-color 0.3s, padding 0.3s;
+    box-shadow: 12px 12px 12px #00000033;
+    background-color: #00000022;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 12px;
+}
+
+h2 {
+    text-align: center;
+}
+.elgato{
+    width: 800px;
+    margin-top: 30px;
+    border: 3px solid #00000044;
+    background: #00000055;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.elgato button{
+    background-color: #00000055;
+    border-radius: 8px;
+}
+
+* {
+    background-color: transparent;
+    text-align: center;
+    color: white;
+    font-family: "Segoe UI Light", 'Segoe UI';
+}
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

@@ -11,6 +11,7 @@
     border-radius: 10px;
     backdrop-filter: blur(12px);
     position: fixed;
+    z-index: 1;
 }
 
 /* Style the links inside the navigation bar */
@@ -30,10 +31,16 @@
 
 .navbar a:hover {
     transition: box-shadow 0.3s, background-color 0.3s, padding 0.3s;
-    box-shadow: 12px 12px 12px #00000033;
-    background-color: #00000022;
+    box-shadow: 12px 12px 12px #00000055;
+    background-color: #77777722;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-radius: 12px;
+}
+
+.navbar a:active {
+    transition: box-shadow 0.3s;
+    box-shadow: 12px 12px 12px #00000055 inset;
     border-radius: 12px;
 }
 
@@ -48,6 +55,8 @@ h2 {
     border-radius: 12px;
     margin-left: auto;
     margin-right: auto;
+    backdrop-filter: blur(12px);
+    z-index: 0;
 }
 .elgato button{
     background-color: #00000055;
@@ -62,22 +71,14 @@ h2 {
 }
 
 body {
-    background: linear-gradient(-45deg, #cc5430, #c51a5b, #0184b3, #01b38a);
-    background-repeat: no-repeat;
+    /*background: linear-gradient(-45deg, #cc5430, #c51a5b, #0184b3, #01b38a);*/
     background-attachment: fixed;
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /*background-size: 400% 400%;*/
+    /*animation: gradient 15s ease infinite;*/
+    background-image: url("/assets/windows-11-dark--11771.png");
 
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }

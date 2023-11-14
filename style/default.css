@@ -48,10 +48,8 @@
 }
 
 body {
-    background-color: black;
-    background-size: 100%;
     background-position: center;
-    background: url("assets/iGu.gif");
+    background: url("/assets/iGu.gif");
     color: white;
 }
 

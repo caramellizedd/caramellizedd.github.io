@@ -1,74 +1,83 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #3B6EA5; /* Windows 95 blue */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #3B6EA5;
+  /* Windows 95 blue */
+}
+
+.container {
+  animation: 0.4s ease-in-out 0s 1 scale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.window {
+  width: 600px;
+  border: 2px solid #000;
+  background-color: #c0c0c0;
+  /* Windows 95 gray */
+  box-shadow: 20px 20px #00000044;
+}
+
+.title-bar {
+  display: flex;
+  align-items: center;
+  background-color: #0000AA;
+  /* Windows 95 blue */
+  color: #fff;
+  padding: 4px;
+  border-bottom: 2px solid black;
+}
+
+.buttons {
+  display: flex;
+  gap: 4px;
+  margin-right: 6px;
+}
+
+.close {
+  width: 12px;
+  height: 12px;
+  margin-left: 3px;
+  margin-bottom: 5px;
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  padding: 20px;
+}
+
+.icon {
+  margin: 40px 40px 0px 30px;
+  font-size: 48px;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  color: #000;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
   }
-  
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
+
+  100% {
+    transform: scale(1);
   }
-  
-  .window {
-    width: 400px;
-    border: 2px solid #000;
-    background-color: #c0c0c0; /* Windows 95 gray */
-    box-shadow: 20px 20px #00000044;
-  }
-  
-  .title-bar {
-    display: flex;
-    align-items: center;
-    background-color: #0000AA; /* Windows 95 blue */
-    color: #fff;
-    padding: 4px;
-    border-bottom: 2px solid black;
-  }
-  
-  .buttons {
-    display: flex;
-    gap: 4px;
-    margin-right: 6px;
-  }
-  
-  .close {
-    width: 12px;
-    height: 12px;
-    margin-left: 3px;
-    margin-bottom: 5px;
-  }
-  
-  .title {
-    flex: 1;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .content {
-    padding: 20px;
-  }
-  
-  .icon {
-    font-size: 48px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  h1 {
-    margin: 10px 0;
-    font-size: 24px;
-    text-align: center;
-  }
-  
-  p {
-    font-size: 16px;
-    color: #000;
-    text-align: center;
-  }
+}

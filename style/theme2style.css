@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+.topnav {
+    padding-top: 2px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgba(51, 51, 51, .80);
+    backdrop-filter: saturate(4) blur(12px);
+    position: fixed;
+    width: 100%;
+}
+
+.topnav a {
+    display: flex;
+    transition: transform 0.3s;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.topnav a:hover {
+    transition: transform 0.3s;
+    transform: translateY(-3px);
+}
+
+li {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+}
+
+li:last-child {
+    margin-right: 0;
+}
+
+li:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+li:hover:after {
+    width: 100%;
+    background: white;
+}
+
+.textoflinks {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.textoflinks a {
+    transition: transform 0.3s;
+    color: gray;
+    text-decoration: underline;
+    font-size: 17px;
+    margin: 10px;
+}
+
+.textoflinks a:hover {
+    transition: transform 0.3s;
+    transform: translateY(-3px) scale(1.03, 1.03);
+    color: white;
+}
+
+.elgato {
+    padding-top: 50px;
+    animation: 0.5s ease-out 0s 1 slideUp;
+    display: flex;
+    justify-content: center;
+}
+
+.elgatoN {
+    animation: 0.5s ease-out 0s 1 slideUp;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.beegtext {
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 500px;
+}
+
+.beegtextN {
+    margin-left: 30px;
+    text-align: left;
+}
+
+.beegtextOldN {
+    animation: 0.5s ease-out 0s 1 slideUp2;
+    text-align: center;
+}
+
+.pfpImage {
+    margin-left: 100px;
+    margin-top: 30px;
+    width: 256px;
+    height: 256px;
+    border: 2px solid white;
+}
+
+.mcImage {
+    margin-left: 100px;
+    margin-top: 30px;
+    width: 256px;
+    height: 256px;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp2 {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

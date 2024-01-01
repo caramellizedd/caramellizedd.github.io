@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>404</title>
+  <title>Windows 9x Bridge</title>
   <script src="https://kit.fontawesome.com/8cc8173c47.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/style/errstyle.css">
 </head>
+
 <body>
   <div class="container">
     <div class="window">
       <div class="title-bar">
         <div class="buttons">
-          <div class="close">X</div>
+          <div class="close"><a onclick='history.back()'>X</a></div>
         </div>
-        <div class="title">An error has occured</div>
+        <div class="title">404 Not Found</div>
       </div>
       <div class="content">
         <div class="icon">
-            <i style="color: #990000;" class="fa-solid fa-rectangle-xmark"></i>
+          <i style="color: #990000;" class="fa-solid fa-rectangle-xmark"></i>
         </div>
-        <h1>404 Not Found</h1>
-        <p>The page you were looking for was not found in the given URL. The URL you've supplied may be moved/deleted/mistyped</p>
+        <div class="text">
+          <p>The page you were looking for was not found in the given URL.</p>
+          <p>The URL you've supplied may be moved/deleted/mistyped/does not exists</p>
+          <p>Click the X button to go back</p>
+        </div>
       </div>
     </div>
   </div>
 </body>
+
 </html>

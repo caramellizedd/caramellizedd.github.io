@@ -64,7 +64,9 @@ body {
     background-color: black;
     font-family: serif;
 }
-
+.elgato a{
+    color: lightblue;
+}
 .beegtext {
     margin: 10px 10px 10px 10px;
     text-align: center;

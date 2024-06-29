@@ -9,59 +9,83 @@ body {
     overflow-x: hidden;
 }
 
+/*Hide Desktop Navigation Menu*/
 .topnav {
-    padding-top: 2px;
-    display: block;
-    align-items: center;
-    text-align: center;
+    visibility: hidden;
     overflow: hidden;
+    position: fixed;
+    width: 0px;
+}
+
+/*Mobile Navigation Menu*/
+.mtopnav {
+    z-index: 99;
     background-color: rgba(51, 51, 51, .80);
     border-bottom: 1px solid #FFFFFF33;
     backdrop-filter: saturate(4) blur(12px);
+    overflow: hidden;
     position: fixed;
     width: 100%;
+    height: 48px;
+    transition: 0.3s ease-in-out height;
+}
+.spacing{
+    width: 0px;
+    height: 48px;
 }
 
-.topnav a {
-    display: flex;
-    transition: transform 0.3s;
+.mtopnav .icon {
+    margin-top: 0px;
+    position: fixed;
+    top: 0;
+}
+.mtopnav a:hover{
+    background-color: #aaa5;
+    color: white;
+}
+
+@media screen and (max-width: 700px) {
+    .mtopnav a{
+        transition: 0.5s opacity;
+        float: none;
+        display: block;
+        text-align: left;
+        opacity: 0;
+    }
+    .mtopnav a.icon {
+        float: right;
+        display: block;
+        position: fixed;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .mtopnav.responsive {
+        transition: 0.3s ease-in-out height;
+        position: fixed;
+        height: 240px;
+    }
+
+    .mtopnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+        transition: 0.3s opacity;
+        opacity: 1;
+    }
+}
+
+.mtopnav a {
+    float: none;
+    display: block;
     color: #f2f2f2;
+    text-align: left;
+    padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    margin-left: 5px;
-    margin-right: 5px;
 }
-
-.topnav a:hover {
-    transition: transform 0.3s;
-    transform: translateY(-3px);
-}
-
-li {
-    display: inline-block;
-    position: relative;
-    margin-right: 10px;
-}
-
-li:last-child {
-    margin-right: 0;
-}
-
-li:after {
-    content: '';
-    display: block;
-    margin: auto;
-    height: 2px;
-    width: 0px;
-    background: transparent;
-    transition: width .5s ease, background-color .5s ease;
-}
-
-li:hover:after {
-    width: 100%;
-    background: white;
-}
-
+/*End Mobile Navigation*/
 .textoflinks {
     margin-top: 100px;
     display: flex;
@@ -83,20 +107,31 @@ li:hover:after {
 }
 
 .elgato {
-    padding-top: 50px;
+    padding-top: 30px;
     animation: 0.5s ease-out 0s 1 slideUp;
     display: flex;
     justify-content: center;
 }
+
+.elgato h1 {
+    font-size: 24px;
+}
+
+.elgato p {
+    font-size: 12px;
+}
+
 .elgato2 {
     animation: 0.5s ease-out 0s 1 slideUp;
     display: flex;
     justify-content: center;
 }
-.elgato a{
+
+.elgato a {
     color: lightblue;
 }
-.elgato2 a{
+
+.elgato2 a {
     color: lightblue;
 }
 
@@ -109,9 +144,10 @@ li:hover:after {
 
 .beegtext {
     margin-top: 30px;
-    margin-left: 10px;
-    width: 500px;
+    margin-left: 20px;
+    width: 800px;
 }
+
 .beegtextLessBorder {
     margin-top: 30px;
     margin-left: 10px;
@@ -132,14 +168,22 @@ li:hover:after {
     text-align: center;
 }
 
-.pfpNameInfo{
-    margin-left: 100px;
+.pfpNameInfo {
+    margin-left: 40px;
+    margin-right: 60px;
     margin-top: 30px;
     width: 256px;
     height: 256px;
     text-align: center;
+    font-size: 12px;
 }
-.palestineNameInfo{
+
+.pfpNameInfo img {
+
+    width: 64px;
+}
+
+.palestineNameInfo {
     margin-left: 100px;
     margin-top: 30px;
     width: 256px;
@@ -148,10 +192,13 @@ li:hover:after {
 }
 
 .pfpImage {
-    width: 256px;
-    height: 256px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 64px;
+    height: 64px;
     border: 2px solid white;
 }
+
 .palestineFlag {
     width: 256px;
     height: 128px;
@@ -191,5 +238,220 @@ li:hover:after {
 
     100% {
         opacity: 1;
+    }
+}
+
+
+/*Desktop UI*/
+@media (min-width: 700px) {
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: black;
+        background-image: url("/assets/websiteblurredbg.png");
+        background-repeat: no-repeat;
+        background-position: top;
+        color: white;
+        overflow-x: hidden;
+    }
+    .mtopnav{
+        visibility: collapse;
+        position: fixed;
+    }
+    .topnav {
+        visibility: visible;
+        padding-top: 2px;
+        display: block;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+        background-color: rgba(51, 51, 51, .80);
+        border-bottom: 1px solid #FFFFFF33;
+        backdrop-filter: saturate(4) blur(12px);
+        position: fixed;
+        width: 100%;
+    }
+
+    .topnav a {
+        display: flex;
+        transition: transform 0.3s;
+        color: #f2f2f2;
+        text-decoration: none;
+        font-size: 17px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .topnav a:hover {
+        transition: transform 0.3s;
+        transform: translateY(-3px);
+    }
+
+    li {
+        display: inline-block;
+        position: relative;
+        margin-right: 10px;
+    }
+
+    li:last-child {
+        margin-right: 0;
+    }
+
+    li:after {
+        content: '';
+        display: block;
+        margin: auto;
+        height: 2px;
+        width: 0px;
+        background: transparent;
+        transition: width .5s ease, background-color .5s ease;
+    }
+
+    li:hover:after {
+        width: 100%;
+        background: white;
+    }
+
+    .textoflinks {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .textoflinks a {
+        transition: transform 0.3s;
+        color: #DDDDDD;
+        text-decoration: underline;
+        font-size: 17px;
+        margin: 10px;
+    }
+
+    .textoflinks a:hover {
+        transition: transform 0.3s;
+        transform: translateY(-3px) scale(1.03, 1.03);
+        color: white;
+    }
+
+    .elgato {
+        padding-top: 50px;
+        animation: 0.5s ease-out 0s 1 slideUp;
+        display: flex;
+        justify-content: center;
+    }
+
+    .elgato2 {
+        animation: 0.5s ease-out 0s 1 slideUp;
+        display: flex;
+        justify-content: center;
+    }
+
+    .elgato a {
+        color: lightblue;
+    }
+
+    .elgato2 a {
+        color: lightblue;
+    }
+
+    .elgatoN {
+        animation: 0.5s ease-out 0s 1 slideUp;
+        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .beegtext {
+        margin-top: 30px;
+        margin-left: 10px;
+        width: 500px;
+    }
+
+    .beegtextLessBorder {
+        margin-top: 30px;
+        margin-left: 10px;
+        width: 865px;
+    }
+
+    .beegtextN {
+        margin-left: 30px;
+        text-align: left;
+    }
+
+    .beegtextN a {
+        color: lightblue;
+    }
+
+    .beegtextOldN {
+        animation: 0.5s ease-out 0s 1 slideUp2;
+        text-align: center;
+    }
+
+    .pfpNameInfo {
+        margin-left: 100px;
+        margin-top: 30px;
+        width: 256px;
+        height: 256px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .palestineNameInfo {
+        margin-left: 100px;
+        margin-top: 30px;
+        width: 256px;
+        height: 128px;
+        text-align: center;
+    }
+
+    .pfpImage {
+        width: 256px;
+        height: 256px;
+        border: 2px solid white;
+    }
+
+    .pfpNameInfo img {
+        width: 256px;
+    }
+
+    .palestineFlag {
+        width: 256px;
+        height: 128px;
+        border: 2px solid white;
+    }
+
+    .mcImage {
+        margin-left: 100px;
+        margin-top: 30px;
+        width: 256px;
+        height: 256px;
+        image-rendering: optimizeSpeed;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -o-crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: pixelated;
+        image-rendering: optimize-contrast;
+        -ms-interpolation-mode: nearest-neighbor;
+    }
+
+    @keyframes slideUp {
+        0% {
+            transform: scale(1.1);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes slideUp2 {
+        0% {
+            transform: translateY(40px);
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
 }

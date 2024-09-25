@@ -1,83 +1,78 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #3B6EA5;
-  /* Windows 95 blue */
+*{
+  padding:0px;
+  margin:0px;
 }
-
-.container {
-  animation: 0.4s ease-in-out 0s 1 scale;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
+button:focus{
+  outline:none;
 }
-
-.window {
-  width: 600px;
-  border: 2px solid #000;
-  background-color: #c0c0c0;
-  /* Windows 95 gray */
-  box-shadow: 20px 20px #00000044;
+.box{
+  background:#C0C0C0;
+  border-width:1px;
+  border-color:#FFFFFF #808080 #808080 #FFFFFF;
+  border-style:solid;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  padding:1px;
 }
-
-.title-bar {
-  display: flex;
-  align-items: center;
-  background-color: #0000AA;
-  /* Windows 95 blue */
-  color: #fff;
-  padding: 4px;
-  border-bottom: 2px solid black;
+div.title{
+  height:18px;
+  width:100%;
+  background:#000080;
+  color:#FFF;
 }
-
-.buttons {
-  display: flex;
-  gap: 4px;
-  margin-right: 6px;
+img.title{
+  float:left;
 }
-
-.close {
-  width: 12px;
-  height: 12px;
-  margin-left: 3px;
-  margin-bottom: 5px;
+p.title{
+  margin:2px 0 0 1px;
+  float:left;
+  font-family:Tahoma;
+  font-weight:bold;
+  font-size:11px;
 }
-
-.title {
-  flex: 1;
-  text-align: center;
-  font-weight: bold;
+.title button{
+  /*position:absolute;
+  right:3px;
+  top:3px;*/
+  margin:2px 2px 2px 0;
+  float:right;
+  width:14px;
+  height:13.5px;
+  background:#C0C0C0;
+  border-width:1px;
+  border-color:#FFFFFF #808080 #808080 #FFFFFF;
+  padding:0;
+  font-size:9px;
+  font-weight:bold;
+  font-family:Tahoma;
+  text-align:center;
 }
-
-.content {
-  display: flex;
-  padding: 20px;
+.body{
+  padding:13px 12px 12px;
+  height:100%;
+  width:calc(100% - 26px);
+  display:inline-block;
 }
-
-.icon {
-  margin: 40px 40px 0px 30px;
-  font-size: 48px;
-  text-align: center;
+.body p{
+  font-family:"MS Sans Serif";
+  font-size:11px;
 }
-
-p {
-  font-size: 16px;
-  color: #000;
+.button button{
+  font-family:"MS Sans Serif";
+  font-size:11px;
+  outline:1px solid #000000;
+  background:#C0C0C0;
+  border-width:1px;
+  border-style:solid;
+  border-color:#FFFFFF #808080 #808080 #FFFFFF;
+  padding:4px 10px;
+  margin:0px auto 10px;
+  display:block;
+  position:relative;
+  bottom:0px;
 }
-
-@keyframes scale {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-
-  100% {
-    transform: scale(1);
-  }
+.button button:active{
+  outline: none;
 }

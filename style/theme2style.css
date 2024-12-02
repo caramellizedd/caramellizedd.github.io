@@ -75,7 +75,7 @@ body {
     .mtopnav.responsive {
         transition: 0.3s ease-in-out height;
         position: fixed;
-        height: 240px;
+        height: 287px;
     }
 
     .mtopnav.responsive a {
